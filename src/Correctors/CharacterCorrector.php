@@ -22,8 +22,25 @@ class CharacterCorrector extends Corrector {
      */
     public function handle($text)
     {
+        //全角转半角
         $text= str_replace(getDBC(),getSBC(),$text);
 
+        //使用全角中文标点
+        $text = preg_replace_callback("/([".getCJK().'])([!?\.,\(\):;\'\"])/iu', function($m){
+            $replace=[
+                '!'=>'！',
+                '?'=>'？',
+                '.'=>'。',
+                ','=>'，',
+                '('=>'（',
+                ')'=>'）',
+                ':'=>'：',
+                ';'=>'；',
+            ];
+            return $m[1].$replace[$m[2]];
+        }, $text);
+
+        //去除中文标点重复
         $text = preg_replace("/([！？])([！？]*)/iu", '$1', $text);
 
         return $text;
