@@ -2,56 +2,28 @@
 
 namespace Ricoa\CopyWritingCorrect\Correctors;
 
-use Ricoa\CopyWritingCorrect\Correctors\Interfaces\Corrector;
-
 /**
  *
- * Class SpaceCorrector
+ * 在 CJK 字符与英文字符间添加空格
  *
  *update base on https://github.com/Rakume/pangu.php/blob/fc7d1c54ada1c85bb0e2725d41ce41b449eb3737/pangu.php
  *
  * @package Ricoa\CopyWritingCorrect\Correctors
  */
-class SpaceCorrector implements Corrector{
-
-    /**
-     * @var SpaceCorrector|null
-     */
-    protected static $corrector=null;
+class SpaceCorrector extends Corrector{
 
     /**
      * @var array
      */
     protected $patterns=[];
 
-    /**
-     * @return mixed
-     */
-    public static function getInstance()
-    {
-        if(static::$corrector==null){
-            static::$corrector=new SpaceCorrector();
-        }
-
-        return static::$corrector;
-    }
-
 
     /**
      * SpaceCorrector constructor.
      */
-    private function __construct()
+    protected function __construct()
     {
-        $cjk = '' .
-            '\x{2e80}-\x{2eff}' .
-            '\x{2f00}-\x{2fdf}' .
-            '\x{3040}-\x{309f}' .
-            '\x{30a0}-\x{30ff}' .
-            '\x{3100}-\x{312f}' .
-            '\x{3200}-\x{32ff}' .
-            '\x{3400}-\x{4dbf}' .
-            '\x{4e00}-\x{9fff}' .
-            '\x{f900}-\x{faff}';
+        $cjk = getCJK();
 
         $this->patterns = array(
             'cjk_quote' => array(

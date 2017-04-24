@@ -2,13 +2,8 @@
 
 namespace Ricoa\CopyWritingCorrect\Correctors\Interfaces;
 
-interface Corrector
+interface ICorrector
 {
-
-    /**
-     * @return mixed
-     */
-    public static function getInstance();
 
     /**
      * @param string $text
