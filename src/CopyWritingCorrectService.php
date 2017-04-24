@@ -2,11 +2,13 @@
 
 namespace Ricoa\CopyWritingCorrect;
 
+use Ricoa\CopyWritingCorrect\Correctors\CharacterCorrector;
 use Ricoa\CopyWritingCorrect\Correctors\SpaceCorrector;
 
 class CopyWritingCorrectService{
 
 	protected $corrects=[
+        CharacterCorrector::class,
         SpaceCorrector::class,
     ];
 
