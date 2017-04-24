@@ -39,5 +39,11 @@ class SpaceTest extends \PHPUnit_Framework_TestCase
             '我家的光纤入户宽带有 10 Gbps，SSD 一共有 20 TB。',
             $service->correct('我家的光纤入户宽带有10Gbps，SSD一共有20TB。')
         );
+
+        //全角标点与其他字符之间不加空格
+        $this->assertEquals(
+            '我家的光纤入户宽带有 10 Gbps，SSD 一共有 20 TB。',
+            $service->correct('我家的光纤入户宽带有10Gbps ，SSD一共有20TB。   ')
+        );
     }
 }

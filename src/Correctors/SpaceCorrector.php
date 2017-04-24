@@ -102,6 +102,10 @@ class SpaceCorrector extends Corrector{
             'number_letters'=>array(
                 '([0-9])([A-Za-z])',
                 '$1 $2'
+            ),
+            'full_character'=>array(
+                "([ ]*)([\u{FF00}-\u{FFFF}。])([ ]*)",
+                '$2'
             )
         );
     }
