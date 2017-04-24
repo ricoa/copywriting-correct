@@ -45,5 +45,11 @@ class SpaceTest extends \PHPUnit_Framework_TestCase
             '我家的光纤入户宽带有 10 Gbps，SSD 一共有 20 TB。',
             $service->correct('我家的光纤入户宽带有10Gbps ，SSD一共有20TB。   ')
         );
+
+        //希腊字母与 CJK 字符以及数字英文字符之间添加空格
+        $this->assertEquals(
+            '电阻为 1 Ω',
+            $service->correct('电阻为1Ω')
+        );
     }
 }

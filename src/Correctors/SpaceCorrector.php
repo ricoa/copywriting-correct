@@ -29,7 +29,6 @@ class SpaceCorrector extends Corrector{
     protected function __construct()
     {
         $cjk = getCJK();
-
         $this->patterns = array(
             'cjk_quote' => array(
                 '([' . $cjk . '])(["\'])',
@@ -106,7 +105,15 @@ class SpaceCorrector extends Corrector{
             'full_character'=>array(
                 "([ ]*)([\u{FF00}-\u{FFFF}。])([ ]*)",
                 '$2'
-            )
+            ),
+            'cjk_greek'=>array(
+                '([' . $cjk . '0-9A-Za-z])([\p{Greek}])',
+                '$1 $2'
+            ),
+            'greek_cjk'=>array(
+                '([\p{Greek}])([' . $cjk . '0-9A-Za-z])',
+                '$1 $2'
+            ),
         );
     }
 
