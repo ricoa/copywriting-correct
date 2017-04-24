@@ -27,5 +27,10 @@ class CharacterTest extends \PHPUnit_Framework_TestCase
             '乔布斯那句话是怎么说的？「Stay hungry, stay foolish.」',
             $service->correct('乔布斯那句话是怎么说的？「Stay hungry, stay foolish.」')
         );
+
+        $this->assertEquals(
+            '乔布斯那句话是怎么说的？「Stay hungry, stay foolish.」！',
+            $service->correct('乔布斯那句话是怎么说的？「Stay hungry, stay foolish.」！！？？')
+        );
     }
 }

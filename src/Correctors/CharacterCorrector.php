@@ -24,6 +24,8 @@ class CharacterCorrector extends Corrector {
     {
         $text= str_replace(getDBC(),getSBC(),$text);
 
+        $text = preg_replace("/([！？])([！？]*)/iu", '$1', $text);
+
         return $text;
     }
 }
