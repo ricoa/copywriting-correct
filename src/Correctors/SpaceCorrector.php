@@ -17,7 +17,7 @@ class SpaceCorrector implements Corrector{
     /**
      * @var SpaceCorrector|null
      */
-    protected static $spaceCorrector=null;
+    protected static $corrector=null;
 
     /**
      * @var array
@@ -29,11 +29,11 @@ class SpaceCorrector implements Corrector{
      */
     public static function getInstance()
     {
-        if(static::$spaceCorrector==null){
-            static::$spaceCorrector=new SpaceCorrector();
+        if(static::$corrector==null){
+            static::$corrector=new SpaceCorrector();
         }
 
-        return static::$spaceCorrector;
+        return static::$corrector;
     }
 
 
