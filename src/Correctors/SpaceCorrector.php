@@ -4,7 +4,7 @@ namespace Ricoa\CopyWritingCorrect\Correctors;
 
 /**
  *
- * 在 CJK 字符与英文字符间添加空格
+ * 在中文字符与英文字符间添加空格
  *
  *update base on https://github.com/Rakume/pangu.php/blob/fc7d1c54ada1c85bb0e2725d41ce41b449eb3737/pangu.php
  *
@@ -28,15 +28,15 @@ class SpaceCorrector extends Corrector{
      */
     protected function __construct()
     {
-        $cjk = getCJK();
+        $cn = getCN();
         $this->patterns = array(
-            'cjk_quote' => array(
-                '([' . $cjk . '])(["\'])',
+            'cn_quote' => array(
+                '([' . $cn . '])(["\'])',
                 '$1 $2'
             ),
 
-            'quote_cjk' => array(
-                '(["\'])([' . $cjk . '])',
+            'quote_cn' => array(
+                '(["\'])([' . $cn . '])',
                 '$1 $2'
             ),
 
@@ -45,40 +45,40 @@ class SpaceCorrector extends Corrector{
                 '$1$3$5'
             ),
 
-            'cjk_hash' => array(
-                '([' . $cjk . '])(#(\S+))',
+            'cn_hash' => array(
+                '([' . $cn . '])(#(\S+))',
                 '$1 $2'
             ),
 
-            'hash_cjk' => array(
-                '((\S+)#)([' . $cjk . '])',
+            'hash_cn' => array(
+                '((\S+)#)([' . $cn . '])',
                 '$1 $3'
             ),
 
-            'cjk_operator_ans' => array(
-                '([' . $cjk . '])([A-Za-z0-9])([\+\-\*\/=&\\|<>])',
+            'cn_operator_ans' => array(
+                '([' . $cn . '])([A-Za-z0-9])([\+\-\*\/=&\\|<>])',
                 '$1 $2 $3'
             ),
 
-            'ans_operator_cjk' => array(
-                '([\+\-\*\/=&\\|<>])([A-Za-z0-9])([' . $cjk . '])',
+            'ans_operator_cn' => array(
+                '([\+\-\*\/=&\\|<>])([A-Za-z0-9])([' . $cn . '])',
                 '$1 $2 $3'
             ),
 
             'bracket' => array(
                 array(
-                    '([' . $cjk . '])([<\[\{\(]+(.*?)[>\]\}\)]+)([' . $cjk . '])',
+                    '([' . $cn . '])([<\[\{\(]+(.*?)[>\]\}\)]+)([' . $cn . '])',
                     '$1 $2 $4'
                 ),
 
                 array(
-                    'cjk_bracket' => array(
-                        '([' . $cjk . '])([<>\[\]\{\}\(\)])',
+                    'cn_bracket' => array(
+                        '([' . $cn . '])([<>\[\]\{\}\(\)])',
                         '$1 $2'
                     ),
 
-                    'bracket_cjk' => array(
-                        '([<>\[\]\{\}\(\)])([' . $cjk . '])',
+                    'bracket_cn' => array(
+                        '([<>\[\]\{\}\(\)])([' . $cn . '])',
                         '$1 $2'
                     )
                 )
@@ -89,13 +89,13 @@ class SpaceCorrector extends Corrector{
                 '$1$3$5'
             ),
 
-            'cjk_ans' => array(
-                '([' . $cjk . '])([A-Za-z0-9`@&%\=\$\^\*\-\+\\/|\\\])',
+            'cn_ans' => array(
+                '([' . $cn . '])([A-Za-z0-9`@&%\=\$\^\*\-\+\\/|\\\])',
                 '$1 $2'
             ),
 
-            'ans_cjk' => array(
-                '([A-Za-z0-9`~!%&=;\|\,\.\:\?\$\^\*\-\+\/\\\])([' . $cjk . '])',
+            'ans_cn' => array(
+                '([A-Za-z0-9`~!%&=;\|\,\.\:\?\$\^\*\-\+\/\\\])([' . $cn . '])',
                 '$1 $2'
             ),
             'number_letters'=>array(
@@ -106,12 +106,12 @@ class SpaceCorrector extends Corrector{
                 "([ ]*)([\u{FF00}-\u{FFFF}。])([ ]*)",
                 '$2'
             ),
-            'cjk_greek'=>array(
-                '([' . $cjk . '0-9A-Za-z])([\p{Greek}])',
+            'cn_greek'=>array(
+                '([' . $cn . '0-9A-Za-z])([\p{Greek}])',
                 '$1 $2'
             ),
-            'greek_cjk'=>array(
-                '([\p{Greek}])([' . $cjk . '0-9A-Za-z])',
+            'greek_cn'=>array(
+                '([\p{Greek}])([' . $cn . '0-9A-Za-z])',
                 '$1 $2'
             ),
         );
