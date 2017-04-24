@@ -1,0 +1,25 @@
+{
+    "name": "ricoa/copywriting-correct",
+    "description": "中文文案排版指北纠正器",
+    "keywords": [
+        "php",
+        "copywriting-correct"
+    ],
+    "homepage": "https://github.com/ricoa/copywriting-correct",
+    "authors": [
+        {
+            "name": "Ricoo",
+            "email": "ricoozf@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ricoa\\CopyWritingCorrect\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
