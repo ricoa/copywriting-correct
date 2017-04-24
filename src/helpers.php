@@ -13,6 +13,7 @@ function getCJK(){
     '\x{f900}-\x{faff}';
 }
 
+//获得全角字符
 function getDBC(){
     return [
         '０' , '１' , '２' , '３' , '４' ,
@@ -35,6 +36,7 @@ function getDBC(){
     ];
 }
 
+//获得半角字符
 function getSBC(){
     return [
         '0', '1', '2', '3', '4',
@@ -56,3 +58,4 @@ function getSBC(){
         '^', '~', '`'
     ];
 }
+

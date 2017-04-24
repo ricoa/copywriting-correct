@@ -1,6 +1,6 @@
 {
     "name": "ricoa/copywriting-correct",
-    "description": "中文文案排版指北纠正器",
+    "description": "中英文文案排版指北纠正器",
     "keywords": [
         "php",
         "copywriting-correct"
