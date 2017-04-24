@@ -13,6 +13,11 @@ namespace Ricoa\CopyWritingCorrect\Correctors;
 class SpaceCorrector extends Corrector{
 
     /**
+     * @var Corrector|null
+     */
+    protected static $corrector=null;
+
+    /**
      * @var array
      */
     protected $patterns=[];

@@ -3,10 +3,7 @@ namespace Ricoa\CopyWritingCorrect\Correctors;
 use \Ricoa\CopyWritingCorrect\Correctors\Interfaces\ICorrector;
 
 abstract class Corrector implements ICorrector {
-    /**
-     * @var SpaceCorrector|null
-     */
-    protected static $corrector=null;
+
 
     /**
      * @return mixed
