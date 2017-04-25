@@ -41,6 +41,42 @@ $text=$service->correct('在LeanCloud上，数据存储是围绕AVObject进行�
 
 ```
 
+# 注入自己的纠正器
+继承 \Ricoa\CopyWritingCorrect\Correctors\Corrector，并实现 handle 方法。例如 ExampleCorrector.php
+```php
+<?php
+
+class ExampleCorrector extends \Ricoa\CopyWritingCorrect\Correctors\Corrector {
+
+    protected static $corrector=null;
+
+    /**
+     * @param string $text
+     *
+     * @return mixed
+     */
+    public function handle($text)
+    {
+        return $text;
+    }
+}
+```
+使用：
+```php
+<?php
+require_once 'vendor/autoload.php';
+
+use Ricoa\CopyWritingCorrect\CopyWritingCorrectService;
+
+$service=new CopyWritingCorrectService();
+
+$service->addCorrectors(new ExampleCorrector());//注入纠正器
+$service->resetCorrectors(new ExampleCorrector());//重置纠正器，也即废弃默认的纠正器
+
+$text=$service->correct('在LeanCloud上，数据存储是围绕AVObject进行的。');
+
+```
+
 # 已实现
 ## 空格
 1. 中文字符与[半角字符](http://zh.wikipedia.org/wiki/%E5%85%A8%E5%BD%A2%E5%92%8C%E5%8D%8A%E5%BD%A2)（例如英文字符，数字，英文标点符号）间添加空格。
