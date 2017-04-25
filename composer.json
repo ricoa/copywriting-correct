@@ -1,6 +1,6 @@
 {
     "name": "ricoa/copywriting-correct",
-    "description": "中英文文案排版指北纠正器，帮助解决中英文混排的排版问题",
+    "description": "中英文文案排版纠正器，帮助解决中英文混排的排版问题",
     "keywords": [
         "php",
         "copywriting-correct"

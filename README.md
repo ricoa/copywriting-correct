@@ -2,19 +2,22 @@
 copywriting-correct
 </a>
 
-<p align="center">中英文文案排版指北纠正器。</p>
+<p align="center">中英文文案排版纠正器。</p>
 
 > 项目地址 https://github.com/ricoa/copywriting-correct
+演示地址 https://copywriting-correct.ricoo.top
 
 # 描述
 > 统一中文文案、排版的相关用法，降低团队成员之间的沟通成本，增强网站气质。
  
 比较以下排版：
 * 排版1
->在Leancloud上,数据存储是围绕avobject进行的.每个AVObject都包含了与JSON兼容的key-value对应的数据。数据是schema-free的，你不需要在每个AVObject上提前指定存在哪些键，只要直接设定对应的key-value即可。
+>LeanCloud数据存储是围绕AVObject进行的.每个AVObject都包含了与JSON兼容的key-value对应的数据。数据是schema-free的，你不需要在每个AVObject上提前指定存在哪些键，只要直接设定对应的key-value即可。
+gitHub是一个通过git进行版本控制的软件源代码托管服务，由GitHub公司（曾称Logical Awesome）的开发者Chris Wanstrath、PJ Hyett和Tom Preston-Werner使用Ruby on Rails编写而成。
 
 * 排版2
->在 LeanCloud 上，数据存储是围绕 AVObject 进行的。每个 AVObject 都包含了与 JSON 兼容的 key-value 对应的数据。数据是 schema-free 的，你不需要在每个 AVObject 上提前指定存在哪些键，只要直接设定对应的 key-value 即可。
+>LeanCloud 数据存储是围绕 AVObject 进行的。每个 AVObject 都包含了与 JSON 兼容的 key-value 对应的数据。数据是 schema-free 的，你不需要在每个 AVObject 上提前指定存在哪些键，只要直接设定对应的 key-value 即可。
+ GitHub 是一个通过 Git 进行版本控制的软件源代码托管服务，由 GitHub 公司（曾称 Logical Awesome）的开发者 Chris Wanstrath、PJ Hyett 和 Tom Preston-Werner 使用 Ruby on Rails 编写而成。
 
 很明显，第二种排版中英文有空格，标点符号也使用正确，专有名词使用正确，会让人看起来更舒服，也更专业。
 本系统正是基于 [中文文案排版指北（简体中文版）](https://github.com/mzlogin/chinese-copywriting-guidelines) 进行纠正，帮助解决中英文混排的排版问题。
