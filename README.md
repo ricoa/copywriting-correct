@@ -5,7 +5,17 @@ copywriting-correct
 <p align="center">中英文文案排版指北纠正器。</p>
 
 ## 描述
-本系统基于 [中文文案排版指北（简体中文版）](https://github.com/mzlogin/chinese-copywriting-guidelines) 进行纠正。
+> 统一中文文案、排版的相关用法，降低团队成员之间的沟通成本，增强网站气质。
+ 
+比较以下排版：
+* 排版1
+>在Leancloud上,数据存储是围绕avobject进行的.每个AVObject都包含了与JSON兼容的key-value对应的数据。数据是schema-free的，你不需要在每个AVObject上提前指定存在哪些键，只要直接设定对应的key-value即可。
+
+* 排版2
+>在 LeanCloud 上，数据存储是围绕 AVObject 进行的。每个 AVObject 都包含了与 JSON 兼容的 key-value 对应的数据。数据是 schema-free 的，你不需要在每个 AVObject 上提前指定存在哪些键，只要直接设定对应的 key-value 即可。
+
+很明显，第二种排版中英文有空格，标点符号也使用正确，专有名词使用正确，会让人看起来更舒服，也更专业。
+本系统正是基于 [中文文案排版指北（简体中文版）](https://github.com/mzlogin/chinese-copywriting-guidelines) 进行纠正，帮助解决中英文混排的排版问题。
 
 ## 安装
 ```
