@@ -4,7 +4,9 @@ copywriting-correct
 
 <p align="center">中英文文案排版指北纠正器。</p>
 
-## 描述
+> 项目地址 https://github.com/ricoa/copywriting-correct
+
+# 描述
 > 统一中文文案、排版的相关用法，降低团队成员之间的沟通成本，增强网站气质。
  
 比较以下排版：
@@ -17,13 +19,13 @@ copywriting-correct
 很明显，第二种排版中英文有空格，标点符号也使用正确，专有名词使用正确，会让人看起来更舒服，也更专业。
 本系统正是基于 [中文文案排版指北（简体中文版）](https://github.com/mzlogin/chinese-copywriting-guidelines) 进行纠正，帮助解决中英文混排的排版问题。
 
-## 安装
+# 安装
 ```
 //安装开发中版本
 composer require ricoa/copywriting-correct:dev-master
 ```
 
-## 使用
+# 使用
 ```php
 <?php
 require_once 'vendor/autoload.php';
@@ -34,20 +36,19 @@ $service=new CopyWritingCorrectService();
 
 $text=$service->correct('在LeanCloud上，数据存储是围绕AVObject进行的。');
 
-
 ```
 
-## 已实现
-### 空格
+# 已实现
+## 空格
 1. 中文字符与[半角字符](http://zh.wikipedia.org/wiki/%E5%85%A8%E5%BD%A2%E5%92%8C%E5%8D%8A%E5%BD%A2)（例如英文字符，数字，英文标点符号）间添加空格。
 2. 数字后面跟着英文字符则在数字后添加空格（适用于数字+单位，例如 1 GB）。
 3. 全角标点与其他字符之间不加空格
 4. 希腊字母与中文字符以及数字和英文字符之间添加空格（不在指北内）。
 
-### 标点符号
+## 标点符号
 1. 不重复使用中文标点符号（仅！和？），重复时只保留第一个。
 
-### 全角和半角
+## 全角和半角
 1. 中文后使用全角中文标点符号（包括！？。，（）：；）。
 2. 数字使用半角字符。
 3. 全角转半角（不在指北内）。
@@ -92,11 +93,12 @@ $text=$service->correct('在LeanCloud上，数据存储是围绕AVObject进行�
 	'^', '~', '`'
 ];
 ```
-### 名词
+## 名词
 1. 专有名词使用正确的大小写（部分名词达成，见 [词典](https://github.com/NauxLiu/auto-correct/blob/afb60f8685a205adfe33ee342c98cc3e20d33c9e/dicts.php)）
 
-
-## 未实现
-
-### 全角和半角
+# 未实现
+## 全角和半角
 1. 遇到完整的英文整句、特殊名词，其內容使用半角标点
+
+# 改进
+有什么新的想法和建议，欢迎提交 [issue](https://github.com/ricoa/copywriting-correct/issues) 或者 [Pull Requests](https://github.com/ricoa/copywriting-correct/pulls)。
