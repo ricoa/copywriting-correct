@@ -105,3 +105,6 @@ $text=$service->correct('在LeanCloud上，数据存储是围绕AVObject进行�
 
 # 改进
 有什么新的想法和建议，欢迎提交 [issue](https://github.com/ricoa/copywriting-correct/issues) 或者 [Pull Requests](https://github.com/ricoa/copywriting-correct/pulls)。
+
+# License
+基于 [MIT license](http://opensource.org/licenses/MIT).
