@@ -14,6 +14,23 @@ class CopyWritingCorrectService{
         SpaceCorrector::class,
     ];
 
+
+    /**
+     * @param array $corrects
+     */
+    public function resetCorrectors(array $corrects)
+    {
+        $this->corrects=$corrects;
+    }
+
+    /**
+     * @param array $corrects
+     */
+    public function addCorrectors(array $corrects)
+    {
+        $this->corrects=array_merge($this->corrects,$corrects);
+	}
+
     /**
      * @param $text
      *
