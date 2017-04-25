@@ -70,8 +70,8 @@ use Ricoa\CopyWritingCorrect\CopyWritingCorrectService;
 
 $service=new CopyWritingCorrectService();
 
-$service->addCorrectors(new ExampleCorrector());//注入纠正器
-$service->resetCorrectors(new ExampleCorrector());//重置纠正器，也即废弃默认的纠正器
+$service->addCorrectors([new ExampleCorrector()]);//注入纠正器
+$service->resetCorrectors([new ExampleCorrector()]);//重置纠正器，也即废弃默认的纠正器
 
 $text=$service->correct('在LeanCloud上，数据存储是围绕AVObject进行的。');
 
