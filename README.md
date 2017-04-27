@@ -20,7 +20,7 @@ gitHub是一个通过git进行版本控制的软件源代码托管服务，由Gi
  GitHub 是一个通过 Git 进行版本控制的软件源代码托管服务，由 GitHub 公司（曾称 Logical Awesome）的开发者 Chris Wanstrath、PJ Hyett 和 Tom Preston-Werner 使用 Ruby on Rails 编写而成。
 
 很明显，第二种排版中英文有空格，标点符号也使用正确，专有名词使用正确，会让人看起来更舒服，也更专业。
-本系统正是基于 [中文文案排版指北（简体中文版）](https://github.com/mzlogin/chinese-copywriting-guidelines) 进行纠正，帮助解决中英文混排的排版问题。
+本系统正是基于 [中文文案排版指北（简体中文版）](https://github.com/mzlogin/chinese-copywriting-guidelines) 进行纠正，帮助解决中英文混排的排版问题，提高文案可阅读性。
 
 # 安装
 ```
@@ -88,7 +88,7 @@ $text=$service->correct('在LeanCloud上，数据存储是围绕AVObject进行�
 1. 不重复使用中文标点符号（仅！和？），重复时只保留第一个。
 
 ## 全角和半角
-1. 中文后使用全角中文标点符号（包括！？。，（）：；）。
+1. 中文以及中文标点符号（```）》```）后使用全角中文标点符号（包括！？。，（）：；）。
 2. 数字使用半角字符。
 3. 全角转半角（不在指北内）。
 ```php
