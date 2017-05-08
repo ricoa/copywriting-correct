@@ -26,7 +26,7 @@ class CharacterCorrector extends Corrector {
         $text= str_replace(getDBC(),getSBC(),$text);
 
         //中文后使用全角中文标点
-        $text = preg_replace_callback("/([".getCN().'）》”])([!?\.,\(\):;\'\"])/iu', function($m){
+        $text = preg_replace_callback("/([".getCN().'）》”])([!?\.,\(\):;])/iu', function($m){
             $replace=[
                 '!'=>'！',
                 '?'=>'？',
